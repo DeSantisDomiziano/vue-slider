@@ -23,10 +23,10 @@
         <div class="container">
             <div class="carousel">
                 <div class="main_img active">
-                    <img class="img-fluid" :src="'movie[0]'" alt="">
+                    <img class="img-fluid" :src="movie[counter].image" alt="">
                     <div class="description">
-                        <h3>titolo</h3>
-                        <p>descrizione</p>
+                        <h3>{{movie[counter].title}}</h3>
+                        <p>{{movie[counter].text}}</p>
                     </div>
                 </div>
                 <div class="thumbnails">
@@ -37,10 +37,10 @@
                     <img class="img-fluid" src="./assets/img/05.webp" alt="">
                 </div>
                 <div class="buttons">
-                    <button class="btn">
+                    <button class="btn" @click="up()">
                         <i class="fa fa-arrow-up"></i>
                     </button>
-                    <button class="btn">
+                    <button class="btn" @click="down()">
                         <i class="fa fa-arrow-down"></i>
                     </button>
                 </div>

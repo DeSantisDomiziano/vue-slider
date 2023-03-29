@@ -32,6 +32,7 @@
     background-color: rgba(0, 0, 0, 0.407);
     padding: 0.75rem;
     border-radius: 1rem;
+    max-width: 65%;
 }
 
 .main_img:not(.active) {
@@ -77,8 +78,3 @@
 .thumbnails img:not(.active) {
     opacity: 0.3;
 }
-
-/* body {
-    height: 100vh;
-    background-color: rgb(0, 0, 0)!important;
-} */
