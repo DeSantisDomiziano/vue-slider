@@ -23,18 +23,14 @@
         <div class="container">
             <div class="carousel">
                 <div class="main_img active">
-                    <img class="img-fluid" :src="movie[counter].image" alt="">
+                    <img class="img-fluid" :src="movies[counter].image" alt="">
                     <div class="description">
-                        <h3>{{movie[counter].title}}</h3>
-                        <p>{{movie[counter].text}}</p>
+                        <h3>{{movies[counter].title}}</h3>
+                        <p>{{movies[counter].text}}</p>
                     </div>
                 </div>
                 <div class="thumbnails">
-                    <img class="img-fluid active" src="./assets/img/01.webp" alt="">
-                    <img class="img-fluid" src="./assets/img/02.webp" alt="">
-                    <img class="img-fluid" src="./assets/img/03.webp" alt="">
-                    <img class="img-fluid" src="./assets/img/04.webp" alt="">
-                    <img class="img-fluid" src="./assets/img/05.webp" alt="">
+                    <img class="img-fluid" :src="movie.image" v-for="movie in movies" alt="">
                 </div>
                 <div class="buttons">
                     <button class="btn" @click="up()">
