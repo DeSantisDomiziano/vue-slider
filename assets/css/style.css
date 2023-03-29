@@ -96,15 +96,15 @@ section {
     left: 0;
     transform-style: preserve-3d;
     perspective: 1000px;
-    animation: gira 10s ease-in-out infinite;
+    animation: gira 7s ease-in-out infinite;
 }
 @keyframes gira {
     0%, 100%
     {
-        transform: scale(1.4) rotate(-15deg);
+        transform: scale(1.3) rotate(-15deg);
     }
     50% {
-        transform: scale(2) rotate(15deg)
+        transform: scale(2.2) rotate(15deg)
     }
 }
 
