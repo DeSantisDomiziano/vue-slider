@@ -1,5 +1,8 @@
+.container {
+    padding-top: 12rem;
+}
+
 .carousel {
-    margin-top: 12rem;
     height: 500px;
     display: flex;
     position: relative;
@@ -29,6 +32,10 @@
     background-color: rgba(0, 0, 0, 0.407);
     padding: 0.75rem;
     border-radius: 1rem;
+}
+
+.main_img:not(.active) {
+    display: none;
 }
 
 .thumbnails {
@@ -62,3 +69,16 @@
     color: white;
     font-size: 1.75rem;
 }
+
+.thumbnails img.active {
+    border: 5px solid black;
+}
+
+.thumbnails img:not(.active) {
+    opacity: 0.3;
+}
+
+/* body {
+    height: 100vh;
+    background-color: rgb(0, 0, 0)!important;
+} */
