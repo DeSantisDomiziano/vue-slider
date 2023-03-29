@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="thumbnails">
-                    <img class="img-fluid" :src="movie.image" v-for="movie in movies" alt="">
+                    <img class="img-fluid" :class="i === counter ? 'active' : ''" :src="movie.image" v-for="(movie, i) in movies" @click="currentImage(i)" alt="">
                 </div>
                 <div class="buttons">
                     <button class="btn" @click="up()">
