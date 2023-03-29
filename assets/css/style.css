@@ -1,14 +1,14 @@
 .container {
-    padding-top: 22rem;
+    padding-top: 5rem;
 }
 
 .carousel {
     height: 500px;
     display: flex;
     position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    top: 210px;
+    right: 100px;
+    transform: rotate(-25deg) skew(335deg);
 }
 
 .main_img {
@@ -87,6 +87,7 @@ section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    z-index: -1;
 }
 
 .pattern {
@@ -138,7 +139,7 @@ section {
     left: 0;
     width: 100%;
     height: 220px;
-    background: linear-gradient(0deg,#ffffffae, transparent);
+    background: linear-gradient(0deg,#ffffffd3, transparent);
 }
 
 .pattern .face2::before {
@@ -148,5 +149,121 @@ section {
     left: 0;
     width: 100%;
     height: 420px;
-    background: linear-gradient(180deg,#ffffffae, transparent);
+    background: linear-gradient(180deg,#ffffffd3, transparent);
+}
+
+#contact {
+    height: 290px;
+    position: absolute;
+    top: 890px;
+    left: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 50%;
+    margin-left: 25%;
+    margin-bottom: -1rem;
+    border-radius: 50%;
+    overflow: inherit;
+}
+
+#contact ul {
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    transform: rotate(-25deg) skew(35deg);
+    list-style: none;
+    padding-bottom: 7rem;
+    padding-left: 6rem;
+}
+
+ul li {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 20px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #212121;
+    transform-origin: top;
+    transform: skewX(-50deg);
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+    background-color: #212121;
+    transform-origin: right;
+    transform: skewy(-40deg);
+}
+
+ul li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    color: #ffffff88;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+ul li:hover span {
+    z-index: 100;
+    transition: 0.5s;
+    color: #ffffff;
+    box-shadow: -1px 1px 1px #00000005;
+}
+
+ul li:hover span:nth-child(1) {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+}
+ul li:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+ul li:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+ul li:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+ul li:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+ul li:nth-child(1):hover span {
+    background-color: #3b5999;
+}
+ul li:nth-child(2):hover span {
+    background-color: #25D366;
+}
+ul li:nth-child(3):hover span {
+    background-color: #55acee;
+}
+ul li:nth-child(4):hover span {
+    background-color: #0077B5;
+}
+ul li:nth-child(5):hover span {
+    background-color: #ed040e;
 }
