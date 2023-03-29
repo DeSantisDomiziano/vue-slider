@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
+        onOff: '',
         counter: 0,
         movies: [
           {
@@ -51,6 +52,16 @@ createApp({
 
       currentImage(i) {
         this.counter = i
+      },
+
+      start() {
+        this.onOff = setInterval(() => {
+          this.down();
+        }, 1900);
+      },
+      
+      stop() {
+        clearInterval(this.onOff);
       }
     }
   }).mount('#app')
